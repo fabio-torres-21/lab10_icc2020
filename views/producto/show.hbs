@@ -1,0 +1,27 @@
+<div class="container">
+    <h3><a href="/productos">Lista de productos</a></h3>
+    <h1>Detalle de Producto</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nombre</td>
+                <td>{{ producto.nombre }}</td>
+            </tr>
+            <tr>
+                <td>Precio</td>
+                <td>{{ producto.precio }}</td>
+            </tr>
+            <tr>
+                <td>Stock</td>
+                <td>{{ producto.stock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3><a href="/productos/edit/{{ producto._id }}"> EDIT</h3>
+
+    <form action="/productos/delete/{{ producto._id }}" method="POST">
+        <button type="submit">DELETE</button>
+    </form>
+
+</div>
